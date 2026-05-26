@@ -1,5 +1,7 @@
 name: Deploy to Hostinger
 
+# Deploys the PHP storefront to Hostinger whenever main changes.
+
 on:
   push:
     branches:
