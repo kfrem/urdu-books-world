@@ -169,6 +169,44 @@ function lang_val($row, $fieldPrefix) {
 }
 
 /**
+ * Books that are shown in the catalogue before stock/cover assets are ready.
+ */
+function coming_soon_slugs() {
+    return [
+        'aag-ka-darya',
+        'aangan',
+        'tasawwuf-aur-insan',
+        'alaska-kahani',
+        'ismat-ki-chugliyan',
+        'bachon-ki-akhlaqi-kahaniyan',
+        'anna-karenina-urdu',
+        'kamiyab-logon-ki-aadatein',
+        'aam-khass',
+        'islami-taleemat',
+        'seerat-un-nabi',
+        'soan-valley',
+        'alchemist-illustrated',
+        'hamdan-ki-beti',
+    ];
+}
+
+function is_coming_soon($book) {
+    return isset($book['slug']) && in_array($book['slug'], coming_soon_slugs(), true);
+}
+
+function is_book_purchasable($book) {
+    return !is_coming_soon($book) && isset($book['stock_quantity']) && (int)$book['stock_quantity'] > 0;
+}
+
+function book_card_action_button($book) {
+    if (!is_book_purchasable($book)) {
+        return '<button type="button" class="btn btn-disabled btn-full-width" disabled><i class="fa fa-clock"></i> ' . e(t('coming_soon')) . '</button>';
+    }
+
+    return '<button type="button" class="btn btn-maroon btn-full-width add-to-cart-btn" data-id="' . (int)$book['id'] . '"><i class="fa fa-cart-plus"></i> ' . e(t('add_to_cart')) . '</button>';
+}
+
+/**
  * Get the cover image URL for a book.
  */
 function get_book_cover($book) {
@@ -178,14 +216,15 @@ function get_book_cover($book) {
         }
         return SITE_URL . '/assets/images/covers/' . $book['cover_image'];
     }
-    
-    if (!empty($book['isbn'])) {
-        // Use Open Library Cover API
-        return "https://covers.openlibrary.org/b/isbn/" . $book['isbn'] . "-L.jpg";
+
+    if (!empty($book['slug'])) {
+        $placeholder = 'placeholders/' . $book['slug'] . '.svg';
+        if (file_exists(dirname(__DIR__) . '/assets/images/covers/' . $placeholder)) {
+            return SITE_URL . '/assets/images/covers/' . $placeholder;
+        }
     }
     
     // Final text placeholder fallback
     $title = isset($book['title_en']) ? urlencode($book['title_en']) : 'Book';
     return "https://placehold.co/300x450?text=" . $title;
 }
-

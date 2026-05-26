@@ -592,6 +592,13 @@ input, select, textarea {
 .btn-whatsapp:hover {
     background-color: #1ebd57;
 }
+.btn-disabled,
+.btn-disabled:hover {
+    background-color: #F4F4F4;
+    color: var(--text-muted);
+    border-color: var(--border-color);
+    cursor: not-allowed;
+}
 
 /* 9. Hero Banner Section */
 .hero-banner {
@@ -1190,6 +1197,7 @@ input, select, textarea {
 .badge-warning { background-color: #FFF4E5; color: #663C00; }
 .badge-secondary { background-color: #F4F4F4; color: #666666; }
 .badge-maroon { background-color: #FAF0F1; color: var(--maroon); }
+.badge-coming-soon { background-color: #FFF4E5; color: #663C00; }
 
 .alert {
     padding: 12px 20px;

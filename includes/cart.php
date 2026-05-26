@@ -22,7 +22,7 @@ function add_to_cart($book_id, $qty = 1) {
     if ($qty <= 0) $qty = 1;
     
     // Verify book exists and has stock
-    $stmt = $pdo->prepare("SELECT id, stock_quantity FROM books WHERE id = ? AND is_active = 1");
+    $stmt = $pdo->prepare("SELECT id, slug, stock_quantity FROM books WHERE id = ? AND is_active = 1");
     $stmt->execute([$book_id]);
     $book = $stmt->fetch();
     
@@ -32,6 +32,10 @@ function add_to_cart($book_id, $qty = 1) {
 
     if ((int)$book['stock_quantity'] <= 0) {
         return ['status' => false, 'message' => t('out_of_stock')];
+    }
+
+    if (is_coming_soon($book)) {
+        return ['status' => false, 'message' => t('coming_soon_message')];
     }
     
     if (is_logged_in()) {

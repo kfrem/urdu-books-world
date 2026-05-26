@@ -1,0 +1,18 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='300' height='450' viewBox='0 0 300 450' role='img' aria-label='Shikast-e-Sada cover placeholder'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0' stop-color='#2D6A4F'/>
+      <stop offset='1' stop-color='#1A1A1A'/>
+    </linearGradient>
+  </defs>
+  <rect width='300' height='450' rx='0' fill='url(#g)'/>
+  <rect x='18' y='18' width='264' height='414' fill='none' stroke='#D8F3DC' stroke-width='3'/>
+  <rect x='34' y='34' width='232' height='382' fill='none' stroke='rgba(255,255,255,0.35)' stroke-width='1'/>
+  <text x='150' y='78' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='15' font-weight='700' letter-spacing='2' fill='#D8F3DC'>URDU BOOKS WORLD</text>
+  <line x1='72' y1='102' x2='228' y2='102' stroke='#D8F3DC' stroke-width='2'/>
+  <text x='150' y='206' text-anchor='middle' font-family='Georgia, serif' font-size='31' font-weight='700' fill='#FFFFFF'>Shikast-e-Sada</text>
+
+  <text x='150' y='320' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='12' letter-spacing='1.5' fill='#F8F1E7'>HIS-SHI-018</text>
+  <rect x='0' y='374' width='300' height='42' fill='#D8F3DC'/>
+  <text x='150' y='401' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='16' font-weight='800' letter-spacing='1.8' fill='#FFFFFF'>PLACEHOLDER COVER</text>
+</svg>

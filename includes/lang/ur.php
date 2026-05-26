@@ -46,6 +46,8 @@ return [
     'stock_status' => 'دستیابی کی صورتحال',
     'in_stock' => 'دستیاب ہے',
     'out_of_stock' => 'دستیاب نہیں ہے',
+    'coming_soon' => 'جلد آرہی ہے',
+    'coming_soon_message' => 'یہ کتاب جلد دستیاب ہوگی، ابھی آرڈر کے لیے دستیاب نہیں ہے۔',
     'description' => 'تفصیلات',
     'author_bio' => 'مصنف کا تعارف',
     'delivery_returns' => 'ڈلیوری اور واپسی',

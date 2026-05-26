@@ -164,9 +164,7 @@ require_once __DIR__ . '/includes/header.php';
                                 </div>
                                 
                                 <div class="book-card-actions">
-                                    <button type="button" class="btn btn-maroon btn-full-width add-to-cart-btn" data-id="<?php echo $book['id']; ?>">
-                                        <i class="fa fa-cart-plus"></i> <?php echo t('add_to_cart'); ?>
-                                    </button>
+                                    <?php echo book_card_action_button($book); ?>
                                 </div>
                             </div>
                         </article>

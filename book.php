@@ -195,7 +195,9 @@ require_once __DIR__ . '/includes/header.php';
                     
                     <div class="stock-status-box">
                         <span class="status-label"><?php echo t('stock_status'); ?>:</span>
-                        <?php if ($book['stock_quantity'] > 0): ?>
+                        <?php if (is_coming_soon($book)): ?>
+                            <span class="badge badge-coming-soon"><i class="fa fa-clock"></i> <?php echo t('coming_soon'); ?></span>
+                        <?php elseif ($book['stock_quantity'] > 0): ?>
                             <span class="badge badge-success"><i class="fa fa-circle-check"></i> <?php echo t('in_stock'); ?> (<?php echo $book['stock_quantity']; ?>)</span>
                         <?php else: ?>
                             <span class="badge badge-danger"><i class="fa fa-circle-xmark"></i> <?php echo t('out_of_stock'); ?></span>
@@ -204,7 +206,7 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
                 
                 <!-- Add to Cart & Buy Box -->
-                <?php if ($book['stock_quantity'] > 0): ?>
+                <?php if (is_book_purchasable($book)): ?>
                     <div class="buy-action-box margin-top-lg">
                         <div class="qty-selector">
                             <button type="button" class="qty-btn qty-btn-minus" onclick="decreaseQty()"><i class="fa fa-minus"></i></button>
@@ -222,7 +224,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 <?php else: ?>
                     <div class="out-of-stock-cta margin-top-lg">
-                        <p class="text-muted">This book is currently out of stock. You can request a copy using our request form.</p>
+                        <p class="text-muted"><?php echo is_coming_soon($book) ? t('coming_soon_message') : 'This book is currently out of stock. You can request a copy using our request form.'; ?></p>
                         <a href="<?php echo SITE_URL; ?>/request-book.php?title=<?php echo urlencode($book['title_en']); ?>&isbn=<?php echo urlencode($book['isbn']); ?>" class="btn btn-gold btn-md margin-top-xs">
                             <i class="fa fa-paper-plane"></i> Request this Book
                         </a>
@@ -335,9 +337,7 @@ require_once __DIR__ . '/includes/header.php';
                                 </div>
                                 
                                 <div class="book-card-actions">
-                                    <button type="button" class="btn btn-maroon btn-full-width add-to-cart-btn" data-id="<?php echo $rel['id']; ?>">
-                                        <i class="fa fa-cart-plus"></i> <?php echo t('add_to_cart'); ?>
-                                    </button>
+                                    <?php echo book_card_action_button($rel); ?>
                                 </div>
                             </div>
                         </article>

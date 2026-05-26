@@ -46,6 +46,8 @@ return [
     'stock_status' => 'Stock Status',
     'in_stock' => 'In Stock',
     'out_of_stock' => 'Out of Stock',
+    'coming_soon' => 'Coming Soon',
+    'coming_soon_message' => 'This book is listed as coming soon and is not available to order yet.',
     'description' => 'Description',
     'author_bio' => 'Author Biography',
     'delivery_returns' => 'Delivery & Returns',
