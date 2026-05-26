@@ -9,11 +9,22 @@ on:
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
+    env:
+      HOSTINGER_FTP_HOST: ${{ secrets.HOSTINGER_FTP_HOST }}
+      HOSTINGER_FTP_USERNAME: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+      HOSTINGER_FTP_PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+      HOSTINGER_FTP_TARGET_DIR: ${{ secrets.HOSTINGER_FTP_TARGET_DIR }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check Hostinger FTP configuration
+        if: env.HOSTINGER_FTP_HOST == '' || env.HOSTINGER_FTP_USERNAME == '' || env.HOSTINGER_FTP_PASSWORD == '' || env.HOSTINGER_FTP_TARGET_DIR == ''
+        run: |
+          echo "Hostinger FTP secrets are not configured yet. Skipping deployment."
+
       - name: Deploy files by FTP
+        if: env.HOSTINGER_FTP_HOST != '' && env.HOSTINGER_FTP_USERNAME != '' && env.HOSTINGER_FTP_PASSWORD != '' && env.HOSTINGER_FTP_TARGET_DIR != ''
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HOSTINGER_FTP_HOST }}
