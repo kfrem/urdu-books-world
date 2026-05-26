@@ -23,6 +23,8 @@ Required GitHub repository secrets for automatic Hostinger deployment:
 
 `HOSTINGER_FTP_TARGET_DIR` should point to the subdomain document root, for example `/public_html/urdubooksworld/` or `/domains/finaccord.pro/public_html/urdubooksworld/`.
 
+Current production deployment target: `https://urdubooksworld.finaccord.pro`.
+
 Follow these simple instructions to launch the site live in under 10 minutes:
 
 ### 1. Create the Subdomain
