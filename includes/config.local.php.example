@@ -1,0 +1,13 @@
+<?php
+/**
+ * Copy this file to config.local.php on the server.
+ * Do not commit real production credentials.
+ */
+
+return [
+    'DB_HOST' => 'localhost',
+    'DB_NAME' => 'u123456_urdubooks',
+    'DB_USER' => 'u123456_dbuser',
+    'DB_PASS' => 'replace-with-a-strong-password',
+    'SITE_URL' => 'https://urdubooksworld.finaccord.pro',
+];

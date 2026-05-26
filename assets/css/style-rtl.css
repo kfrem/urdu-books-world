@@ -1,0 +1,175 @@
+/*
+ * Urdu Books World - RTL Overrides (Urdu Layout Switcher)
+ * Loaded after style.css when CURRENT_LANG is 'ur'
+ */
+
+body, input, select, textarea, button, .lang-ur-font {
+    font-family: var(--font-ur), var(--font-en);
+    line-height: 2.0 !important;
+}
+
+/* RTL resets */
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Top bar menu adjustments */
+.top-contacts {
+    gap: 20px;
+}
+.top-contacts a i {
+    margin-left: 4px;
+    margin-right: 0;
+}
+
+/* Header Grid overrides */
+.search-input-group {
+    flex-direction: row-reverse;
+}
+.search-type-select {
+    border-right: none;
+    border-left: 1px solid var(--border-color);
+}
+.search-submit-btn {
+    border-radius: 25px 0 0 25px !important;
+}
+
+.cart-icon-wrapper {
+    margin-left: 4px;
+    margin-right: 0;
+}
+.cart-counter {
+    right: auto;
+    left: -8px;
+}
+
+/* Navigation items reverse */
+.nav-list {
+    padding-right: 0;
+}
+.nav-dropdown {
+    left: auto;
+    right: 0;
+}
+.nav-dropdown a:hover {
+    padding-left: 20px;
+    padding-right: 25px; /* RTL slide in */
+}
+
+/* Category Strip horizontal items list */
+.strip-title {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* Badge placements */
+.discount-badge {
+    left: auto;
+    right: 10px;
+}
+
+/* Related books section */
+.book-card-price-row {
+    flex-direction: row-reverse;
+}
+.price-original {
+    margin-right: 6px;
+    margin-left: 0;
+}
+
+/* Breadcrumbs RTL mapping */
+.breadcrumb-list {
+    padding-right: 0;
+}
+.breadcrumb-chevron {
+    transform: rotate(180deg);
+}
+
+/* Book Details Tab items list */
+.tab-trigger {
+    border-bottom: 2px solid transparent;
+}
+.tab-trigger.active {
+    border-bottom: 2px solid var(--maroon);
+}
+
+/* Sizing meta grid */
+.book-meta-grid {
+    direction: rtl;
+}
+
+/* Sizing columns */
+.buy-action-box {
+    gap: 15px;
+}
+
+/* Shopping Cart list columns */
+.cart-table th {
+    text-align: right;
+}
+.cart-table td {
+    text-align: right;
+}
+.cart-col-total {
+    text-align: left !important;
+}
+.cart-table th:last-child, .cart-table td:last-child {
+    text-align: center;
+}
+
+/* Summary Box lists */
+.summary-row-pkr {
+    text-align: left;
+}
+
+/* Forms layout labels */
+.form-label {
+    text-align: right;
+}
+.widget-checkbox-label input {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/* Footer layout */
+.footer-links {
+    padding-right: 0;
+}
+.footer-links a:hover {
+    padding-left: 0;
+    padding-right: 5px;
+}
+.footer-contact-details {
+    padding-right: 0;
+}
+.footer-contact-details li i {
+    margin-left: 8px;
+    margin-right: 0;
+}
+.footer-bottom-content {
+    flex-direction: row-reverse;
+}
+.copyright-text {
+    text-align: right;
+}
+
+/* Sidebar Widgets filters list */
+.widget-list {
+    padding-right: 0;
+}
+.widget-sublist {
+    padding-left: 0;
+    padding-right: 15px;
+}
+.catalog-feed-header {
+    flex-direction: row-reverse;
+}
+.catalog-sort-wrapper {
+    display: flex;
+    align-items: center;
+}
+.sort-label {
+    margin-right: 0;
+    margin-left: 8px;
+}

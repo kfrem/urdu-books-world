@@ -1,0 +1,12 @@
+# robots.txt for https://urdubooksworld.finaccord.pro
+# Managed by KAFS LTD t/a Urdu Books World
+
+User-agent: *
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /sql/
+Disallow: /cart.php
+Disallow: /checkout.php
+Disallow: /account.php
+
+Sitemap: https://urdubooksworld.finaccord.pro/sitemap.xml

@@ -1,0 +1,312 @@
+/*
+ * Urdu Books World - Admin Console Stylesheet
+ */
+
+.admin-body {
+    background-color: #F0EDE6;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+/* 1. Admin Topbar */
+.admin-topbar {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.admin-topbar-brand a {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.badge-admin {
+    background-color: var(--gold);
+    color: #FFFFFF;
+    font-size: 9px;
+    margin-left: 6px;
+    padding: 2px 5px;
+}
+.admin-topbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 13.5px;
+}
+.topbar-sep {
+    color: #444444;
+}
+.admin-topbar-link:hover {
+    color: var(--gold);
+}
+.link-logout {
+    color: #FF8A80;
+}
+.link-logout:hover {
+    color: #FF5252;
+}
+
+/* 2. Admin Layout Grid */
+.admin-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: calc(100vh - 50px);
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+    background-color: #262626;
+    color: #CCCCCC;
+    border-right: 1px solid #1A1A1A;
+}
+.admin-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.admin-menu-item {
+    border-bottom: 1px solid #333333;
+}
+.admin-menu-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 14.5px;
+    transition: var(--transition);
+}
+.admin-menu-icon {
+    width: 25px;
+    font-size: 16px;
+    color: var(--gold);
+}
+.admin-menu-item:hover .admin-menu-link, .admin-menu-item.active .admin-menu-link {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+.admin-menu-item.active {
+    border-left: 4px solid var(--maroon);
+}
+
+/* 3. Main Content Area */
+.admin-main {
+    padding: 30px;
+    background-color: #FAF8F4;
+}
+.admin-page-header {
+    border-bottom: 2px solid #E2DCD3;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.split-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--maroon);
+    margin: 0 0 4px 0;
+}
+
+/* 4. Stats Grid Cards */
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.stat-card {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border: 1px solid #E5E0D8;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.stat-card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.bg-success-light { background-color: #E8F5E9; }
+.bg-maroon-light { background-color: #FCE4EC; }
+.bg-gold-light { background-color: #FFF8E1; }
+.bg-warning-light { background-color: #FFF3E0; }
+.bg-info-light { background-color: #E3F2FD; }
+.bg-danger-light { background-color: #FFEBEE; }
+
+.stat-card-info {
+    display: flex;
+    flex-direction: column;
+}
+.stat-label {
+    font-size: 12.5px;
+    color: #777777;
+    font-weight: 600;
+}
+.stat-value {
+    font-size: 22px;
+    margin: 2px 0;
+    font-weight: 700;
+}
+.stat-subtext {
+    font-size: 11px;
+    color: #999999;
+}
+
+/* Split Columns */
+.admin-content-split-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* 5. Elegant Cards & Tables */
+.admin-card {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #E5E0D8;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    overflow: hidden;
+}
+.admin-card-header {
+    background-color: #FAF7F2;
+    padding: 15px 20px;
+    border-bottom: 1.5px solid #E2DCD3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--maroon);
+}
+.admin-card-footer {
+    background-color: #FAF7F2;
+    border-top: 1.5px solid #E2DCD3;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.admin-table th {
+    background-color: #FAF6EE;
+    border-bottom: 2px solid #E2DCD3;
+    padding: 12px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--maroon);
+}
+.admin-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #E5E0D8;
+    font-size: 13.5px;
+    vertical-align: middle;
+}
+.admin-table tr:hover {
+    background-color: #FAF9F6;
+}
+
+/* Action button links */
+.action-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: #FAF6EE;
+    border: 1px solid #E2DCD3;
+    margin-left: 4px;
+}
+.action-btn-icon:hover {
+    background-color: var(--maroon);
+    color: #FFFFFF !important;
+}
+
+/* Dynamic Admin Forms */
+.admin-book-form {
+    max-width: 900px;
+}
+.admin-settings-form {
+    max-width: 800px;
+}
+.admin-customer-notes-box {
+    border-right: 3px solid var(--maroon);
+}
+
+/* CSV bulk importer style overrides */
+.form-row-file-input {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.form-control-file {
+    border: 1px dashed var(--border-color);
+    padding: 10px;
+    background-color: var(--bg);
+}
+
+.admin-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    font-size: 13.5px;
+}
+
+/* Tablet Responsive admin layout */
+@media (max-width: 1024px) {
+    .admin-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .admin-content-split-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+    .admin-sidebar {
+        display: none; /* Hide admin menu sidebar on narrow tablet, accessible from standard web links */
+    }
+    .admin-topbar {
+        padding: 10px 15px;
+    }
+    .admin-main {
+        padding: 15px;
+    }
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .split-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .header-action-buttons {
+        width: 100%;
+    }
+    .header-action-buttons .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
