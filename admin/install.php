@@ -8,7 +8,7 @@ define('LOCK_FILE', __DIR__ . '/install.lock');
 
 // Prevent running if lock file exists
 if (file_exists(LOCK_FILE)) {
-    die("Installation already completed. If you wish to re-install, please delete the file '/admin/install.lock' via your Hostinger File Manager.");
+    die("Installation already completed. If you wish to re-install, please delete the file '/admin/install.lock' via your hosting file manager.");
 }
 
 $error_msg = '';
@@ -105,7 +105,7 @@ return [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urdu Books World - Subdomain Installer</title>
+    <title>Urdu Books World - Website Installer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -207,7 +207,7 @@ return [
     <div class="container">
         <div class="brand-header">
             <h1 class="brand-title">URDU <span>BOOKS</span> WORLD</h1>
-            <p>Hostinger Subdomain Web Installer</p>
+            <p>Website Installer</p>
         </div>
 
         <?php if (!empty($error_msg)): ?>
@@ -227,7 +227,7 @@ return [
                 <h3 style="margin-top:0;">1. Website URL</h3>
                 <div class="form-group">
                     <label>Public Site URL *</label>
-                    <input type="url" name="site_url" required value="<?php echo htmlspecialchars(((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . ($_SERVER['HTTP_HOST'] ?? 'urdubooksworld.finaccord.pro')); ?>">
+                    <input type="url" name="site_url" required value="<?php echo htmlspecialchars(((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . ($_SERVER['HTTP_HOST'] ?? 'urdubooksworld.co.uk')); ?>">
                 </div>
 
                 <hr>

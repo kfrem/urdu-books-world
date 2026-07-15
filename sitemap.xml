@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/index.php</loc>
+    <loc>https://urdubooksworld.co.uk/index.php</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/category.php</loc>
+    <loc>https://urdubooksworld.co.uk/category.php</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/new-arrivals.php</loc>
+    <loc>https://urdubooksworld.co.uk/new-arrivals.php</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/discounts.php</loc>
+    <loc>https://urdubooksworld.co.uk/discounts.php</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/request-book.php</loc>
+    <loc>https://urdubooksworld.co.uk/request-book.php</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/how-to-pay.php</loc>
+    <loc>https://urdubooksworld.co.uk/how-to-pay.php</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/delivery-charges.php</loc>
+    <loc>https://urdubooksworld.co.uk/delivery-charges.php</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/about.php</loc>
+    <loc>https://urdubooksworld.co.uk/about.php</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/contact.php</loc>
+    <loc>https://urdubooksworld.co.uk/contact.php</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/catalogue.php</loc>
+    <loc>https://urdubooksworld.co.uk/catalogue.php</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/privacy-policy.php</loc>
+    <loc>https://urdubooksworld.co.uk/privacy-policy.php</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://urdubooksworld.finaccord.pro/terms.php</loc>
+    <loc>https://urdubooksworld.co.uk/terms.php</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
